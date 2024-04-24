@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Party Signup Form</title>
+    <style>
+        body{
+        font-family: Times, "Times New Roman", Georgia, serif;
+        background-image: url('images/birthday.jpg  '); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #333;
+        }
+        form{
+            max-width: 600px;
+            margin: 10px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        label{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="time"]{
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #3B71CA;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+        background-color: #0056b3;
+    }   
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post" onsubmit="validateForm()">
+        <div>
+    <label for="fullName">Full Name</label>
+    <input type="text" name="fullName" id="fullName" required>
+</div>
+<div>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+</div>
+<div>
+    <label for="phoneNumber">Phone Number</label>
+    <input type="tel" name="phoneNumber" id="phoneNumber">
+</div>
+<div>
+    <label for="numberofGuests">Number of Guests</label>
+    <input type="number" name="numberofGuests" id="numberofGuests" min="1" maxlength="10" required>
+</div>
+<div>
+    <label for="dietaryRestrictions">Dietary Restrictions:</label>
+    <input type="text" name="dietaryRestrictions" id="dietaryRestrictions" required>
+</div>
+<div>
+    <label for="arrivalTime">Arrival Time</label>
+    <input type="time" name="arrivalTime" id="arrivalTime">
+</div>
+<div>
+    <label for="giftSuggestion">Gift Suggestion</label>
+    <input type="text" name="giftSuggestion" id="giftSuggestion">
+</div>
+<div>
+    <label for="party">I will attend the party</label>
+    <input type="checkbox" name="party" id="party" required>
+</div>
+<div>
+    <input type="submit"></button>
+</div>
+</form>
+<script>
+    function validateForm(){
+        debugger
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const numberofGuests = document.getElementById('numberofGuests').value;
+        const dietaryRestrictions = document.getElementById('dietaryRestrictions').value;
+        const attendParty = document.getElementById('party').value;
+        if(!fullName || !email || !numberofGuests || !dietaryRestrictions || !party){
+            alert("please fill the all required fields");
+            return false;
+        }
+        return true;
+
+    }
+</script>
+
+</body>
+</html>
