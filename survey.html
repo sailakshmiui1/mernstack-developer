@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="uploadForm"> <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="18" maxlength="120" required>
+        <label for="rating">Satisfaction Rating</label>
+        <input type="range" name="rating" id="rating" min="1" max="5" value="3">
+        <label for="fcolor">Favorite Color</label>
+        <input type="color" name="fcolor" id="fcolor">
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date">
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time">
+        <label for="file">Upload File</label>
+        <input type="file" name="file" id="file" accept="application/pdf, application/excel">
+        <label for="feedback">Feedback</label>
+        <textarea name="feedback" id="feedback" cols="30" rows="10"
+            placeholder="Enter your feedback here..."></textarea>
+    </form>
+    <button value="uploadForm">submit</button>
+
+</body>
+
+</html>
